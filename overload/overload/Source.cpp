@@ -14,7 +14,8 @@ int main(int argc, char** argv) {
 	c1 = -c3;  c1.display();
 	*/
 
-	//CCound overloading friend or member difference
+	//CCount overloading friend or member difference
+	/*
 	CCount d1(10), d2;
 	d2 = d1++;
 	d1.display(); d2.display(); cout << endl;
@@ -22,6 +23,15 @@ int main(int argc, char** argv) {
 	d1.display(); d2.display(); cout << endl;
 	++++d1;
 	d1.display(); d2.display(); cout << endl;
+	*/
+
+	//overloading i/o stream
+	CComplex c1(2, 5), c2(-3, -2), c3, c4, c5, c6;
+	c3 = c1 + c2;
+	cout << c3 << c2;
+	cin >> c4 >> c5;
+	c6 = c4 + c5;
+	cout << c4 << c5 << c6;
 	return 0;
 }
 

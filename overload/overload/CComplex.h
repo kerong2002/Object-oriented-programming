@@ -2,7 +2,6 @@
 #ifndef CCOMPLEX_H
 #define CCOMPLEX_H
 
-
 class CComplex {
 public:
     CComplex();
@@ -14,6 +13,8 @@ public:
     friend CComplex operator+(int r, CComplex& o1);
     friend CComplex operator-(CComplex& o1);
     const void display();
+    friend std::ostream& operator<<(std::ostream& out, CComplex& c);
+    friend std::istream& operator>>(std::istream& out, CComplex& c);
 private:
     int real;
     int imag;

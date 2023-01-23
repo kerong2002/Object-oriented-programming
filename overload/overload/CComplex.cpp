@@ -48,3 +48,14 @@ CComplex operator+(int r, CComplex& o1) {
 CComplex operator-(CComplex& o1) {
     return CComplex(-o1.real, -o1.imag);
 }
+
+//overloading as i/o stream
+std::ostream& operator<<(std::ostream& out, CComplex& c) {
+    out << "(" << c.real << "," << c.imag << "i)" << std::endl;
+    return out;
+}
+
+std::istream& operator>>(std::istream& in, CComplex& c) {
+    in >> c.real >> c.imag;
+    return in;
+}
